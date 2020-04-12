@@ -70,9 +70,9 @@ public class QueMePongo {
 		agregarColorSecundario(color);
 	}
 	
+	
 	public void generarConjuntos(){
-		
-			
+
 	}
 
 }

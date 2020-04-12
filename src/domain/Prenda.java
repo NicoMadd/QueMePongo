@@ -1,15 +1,21 @@
 package domain;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 import exceptions.PrendaInvalidaException;
 
 public class Prenda {
-	CategoriaPrenda categoriaPrenda;
+	TipoPrenda tipoPrenda;
 	Color color;
 	Material material;
-	public Prenda(CategoriaPrenda unaCategoriaDePrenda) {
+	Collection<FactorClima> preferenciaClimatica;
+	public Prenda(TipoPrenda unTipoPrenda) {
+		this.tipoPrenda = unTipoPrenda;
 		this.material = Material.NINGUNO;
 		this.color = Color.NINGUNO;
-		this.categoriaPrenda = unaCategoriaDePrenda;
+		this.preferenciaClimatica = new HashSet<FactorClima>();
+		this.preferenciaClimatica.add(unTipoPrenda.getClimaOptimo());
 	}
 	
 	public void validar() throws PrendaInvalidaException{
@@ -19,34 +25,39 @@ public class Prenda {
 		if(material == Material.NINGUNO) {
 			throw new PrendaInvalidaException("Prenda Invalida! La prenda no tiene un material asignado");
 		}
+		if(preferenciaClimatica.isEmpty()) {
+			throw new PrendaInvalidaException("Prenda Invalida! La prende no tiene preferencia climatica");
+		}
 	}
 	
 	public Material getMaterial() {
 		return material;
 	}
 	
+
+	
 	public void setMaterial(Material material) {
 		this.material = material;
 	}
 	
 	public CategoriaPrenda getCategoriaPrenda() {
-		return categoriaPrenda;
+		return tipoPrenda.getCategoriaPrenda();
 	}
 
 	public boolean esParteSuperior() {
-		return categoriaPrenda==CategoriaPrenda.PARTE_SUPERIOR;
+		return getCategoriaPrenda()==CategoriaPrenda.PARTE_SUPERIOR;
 	}
 	
 	public boolean esParteInferior() {
-		return categoriaPrenda==CategoriaPrenda.PARTE_INFERIOR;
+		return getCategoriaPrenda()==CategoriaPrenda.PARTE_INFERIOR;
 	}
 	
 	public boolean esCalzado() {
-		return categoriaPrenda==CategoriaPrenda.CALZADO;
+		return getCategoriaPrenda()==CategoriaPrenda.CALZADO;
 	}
 	
 	public boolean esAccesorio() {
-		return categoriaPrenda==CategoriaPrenda.ACCESORIO;
+		return getCategoriaPrenda()==CategoriaPrenda.ACCESORIO;
 	}
 
 	public void setColor(Color unColor) {

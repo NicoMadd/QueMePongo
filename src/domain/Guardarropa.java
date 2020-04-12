@@ -8,6 +8,9 @@ public class Guardarropa {
 		this.guardarropa = new LinkedList<>();
 	
 	}
+	public LinkedList<Prenda> getGuardarropa(){
+		return guardarropa;
+	}
 	
 	public void agregar(Prenda unaPrenda) {
 		guardarropa.add(unaPrenda);
