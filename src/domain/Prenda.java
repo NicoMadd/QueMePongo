@@ -34,8 +34,6 @@ public class Prenda {
 		return material;
 	}
 	
-
-	
 	public void setMaterial(Material material) {
 		this.material = material;
 	}
@@ -63,6 +61,5 @@ public class Prenda {
 	public void setColor(Color unColor) {
 		this.color = unColor;	
 	}
-	
 
 }
