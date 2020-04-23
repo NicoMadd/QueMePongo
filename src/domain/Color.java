@@ -1,13 +1,9 @@
 package domain;
 
-public enum Color {
-	NINGUNO,
-	AZUL,
-	AMARILLO,
-	ROJO,
-	MARRON,
-	VERDE,
-	NEGRO,
-	BLANCO,
-
+class Color {
+	int rojo, verde, azul;
+	
+	Color(int rojo, int verde,int azul){
+		//moldea color
+	}
 }

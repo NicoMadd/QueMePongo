@@ -1,9 +1,9 @@
 package exceptions;
 
-public class PrendaInvalidaException extends Exception {
+public class PrendaInvalidaException extends RuntimeException{
 
 	public PrendaInvalidaException(String mensaje) {
-		super(mensaje);
+		super("Prenda Invalida!" + mensaje);
 	}
 
 }

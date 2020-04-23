@@ -21,13 +21,13 @@ public class Atuendo {
 	
 	public void validar() throws AtuendoInvalidoException{
 		if(prendas.isEmpty()) {
-			throw new AtuendoInvalidoException("Atuendo Invalido! El atuendo no contiene prendas");
+			throw new AtuendoInvalidoException("El atuendo no contiene prendas");
 		}
 		if(prendas.size()<3 || prendas.size()>4) {
-			throw new AtuendoInvalidoException("Atuendo Invalido! Le faltan prendas o tiene de mas!");
+			throw new AtuendoInvalidoException("Le faltan prendas o tiene de mas!");
 		
 		}else if(!contienePrendasNecesarias()) {
-			throw new AtuendoInvalidoException("Atuendo Invalido! El atuendo no contiene las prendas necesarias para su "
+			throw new AtuendoInvalidoException("El atuendo no contiene las prendas necesarias para su "
 												+ "validacion. Estas son un UNICO CALZADO, UNA UNICA "
 												+ "PARTE SUPERIOR Y UNA UNICA PARTE INFERIOR");
 		}

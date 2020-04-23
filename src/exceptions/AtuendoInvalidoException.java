@@ -1,9 +1,9 @@
 package exceptions;
 
-public class AtuendoInvalidoException extends Exception{
+public class AtuendoInvalidoException extends RuntimeException{
 
 	public AtuendoInvalidoException(String mensaje) {
-		super(mensaje);
+		super("Atuendo Invalido!" + mensaje);
 	}
 
 }

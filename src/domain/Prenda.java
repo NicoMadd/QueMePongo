@@ -1,32 +1,29 @@
 package domain;
 
-import java.util.Collection;
-import java.util.HashSet;
 
 import exceptions.PrendaInvalidaException;
 
 public class Prenda {
 	TipoPrenda tipoPrenda;
-	Color color;
+	Color colorPrimario;
+	Color colorSecunadario;
 	Material material;
-	Collection<FactorClima> preferenciaClimatica;
-	public Prenda(TipoPrenda unTipoPrenda) {
+	public Prenda(TipoPrenda unTipoPrenda, Material material, Color colorPrimario, Color colorSecundario) {
+		validar(unTipoPrenda, material, colorPrimario);
 		this.tipoPrenda = unTipoPrenda;
-		this.material = Material.NINGUNO;
-		this.color = Color.NINGUNO;
-		this.preferenciaClimatica = new HashSet<FactorClima>();
-		this.preferenciaClimatica.add(unTipoPrenda.getClimaOptimo());
+		this.material = material;
+		this.colorPrimario = colorPrimario;
 	}
 	
-	public void validar() throws PrendaInvalidaException{
-		if(color.equals(Color.NINGUNO)) {
-			throw new PrendaInvalidaException("Prenda Invalida! La prenda no tiene un color asignado");
+	public void validar(TipoPrenda unTipoPrenda, Material material, Color color){
+		if(unTipoPrenda.equals(null)) {
+			throw new PrendaInvalidaException("La prenda no tiene un tipo asignado");
 		}
-		if(material == Material.NINGUNO) {
+		if(color.equals(null)) {
+			throw new PrendaInvalidaException("La prenda no tiene un color asignado");
+		}
+		if(material.equals(null)) {
 			throw new PrendaInvalidaException("Prenda Invalida! La prenda no tiene un material asignado");
-		}
-		if(preferenciaClimatica.isEmpty()) {
-			throw new PrendaInvalidaException("Prenda Invalida! La prende no tiene preferencia climatica");
 		}
 	}
 	
@@ -39,7 +36,7 @@ public class Prenda {
 	}
 	
 	public CategoriaPrenda getCategoriaPrenda() {
-		return tipoPrenda.getCategoriaPrenda();
+		return tipoPrenda.getCategoria();
 	}
 
 	public boolean esParteSuperior() {
@@ -56,10 +53,6 @@ public class Prenda {
 	
 	public boolean esAccesorio() {
 		return getCategoriaPrenda()==CategoriaPrenda.ACCESORIO;
-	}
-
-	public void setColor(Color unColor) {
-		this.color = unColor;	
 	}
 
 }

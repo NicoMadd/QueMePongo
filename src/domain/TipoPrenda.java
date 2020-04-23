@@ -2,23 +2,18 @@ package domain;
 
 public enum TipoPrenda {
 	
-	REMERA (CategoriaPrenda.PARTE_SUPERIOR, FactorClima.SOL),
-	PANTALON (CategoriaPrenda.PARTE_INFERIOR, FactorClima.FRIO);
+	REMERA (CategoriaPrenda.PARTE_SUPERIOR),
+	PANTALON (CategoriaPrenda.PARTE_INFERIOR);
 	
 	private final CategoriaPrenda categoriaPrenda;
-	private final FactorClima climaOptimo;
 	
-	TipoPrenda(CategoriaPrenda categoriaPrenda, FactorClima climaOptimo) {
+	TipoPrenda(CategoriaPrenda categoriaPrenda) {
 		this.categoriaPrenda = categoriaPrenda;
-		this.climaOptimo = climaOptimo;
 	}
 	
-	public CategoriaPrenda getCategoriaPrenda() {
+	public CategoriaPrenda getCategoria() {
 		return this.categoriaPrenda;
 	}
-	
-	public FactorClima getClimaOptimo() {
-		return climaOptimo;
-	}
+
 }
 
