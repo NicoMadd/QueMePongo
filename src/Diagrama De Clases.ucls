@@ -1,244 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <enumeration id="1" language="java" name="domain.Color" project="QueMePongo" file="/QueMePongo/src/domain/Color.java" 
+  <class id="1" language="java" name="domain.Color" project="QueMePongo" file="/QueMePongo/src/domain/Color.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1041" y="596"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </enumeration>  
-  <class id="2" language="java" name="domain.Prenda" project="QueMePongo" file="/QueMePongo/src/domain/Prenda.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="236" y="431"/>    
+    <position height="-1" width="-1" x="378" y="892"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="domain.QueMePongo" project="QueMePongo" 
-    file="/QueMePongo/src/domain/QueMePongo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1043" y="207"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <enumeration id="4" language="java" name="domain.FactorClima" project="QueMePongo" 
-    file="/QueMePongo/src/domain/FactorClima.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="785" y="689"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </enumeration>  
-  <enumeration id="5" language="java" name="domain.CategoriaPrenda" project="QueMePongo" 
+  <enumeration id="2" language="java" name="domain.CategoriaPrenda" project="QueMePongo" 
     file="/QueMePongo/src/domain/CategoriaPrenda.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1046" y="1014"/>    
+    <position height="-1" width="-1" x="934" y="958"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="6" language="java" name="domain.Guardarropa" project="QueMePongo" 
+  <class id="3" language="java" name="domain.Guardarropa" project="QueMePongo" 
     file="/QueMePongo/src/domain/Guardarropa.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="608" y="375"/>    
+    <position height="-1" width="-1" x="142" y="100"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="7" language="java" name="domain.Material" project="QueMePongo" 
+  <enumeration id="4" language="java" name="domain.Material" project="QueMePongo" 
     file="/QueMePongo/src/domain/Material.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="137" y="899"/>    
+    <position height="-1" width="-1" x="105" y="413"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
+  <class id="5" language="java" name="domain.User" project="QueMePongo" file="/QueMePongo/src/domain/User.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="565" y="140"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="domain.Prenda" project="QueMePongo" file="/QueMePongo/src/domain/Prenda.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="401" y="596"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="domain.UniformeSanJuan" project="QueMePongo" 
+    file="/QueMePongo/src/domain/UniformeSanJuan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1217" y="153"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <class id="8" language="java" name="domain.Atuendo" project="QueMePongo" file="/QueMePongo/src/domain/Atuendo.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="236" y="133"/>    
+    <position height="-1" width="-1" x="947" y="413"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="9" language="java" name="domain.TipoPrenda" project="QueMePongo" 
-    file="/QueMePongo/src/domain/TipoPrenda.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="448" y="905"/>    
+  <class id="9" language="java" name="domain.Remera" project="QueMePongo" file="/QueMePongo/src/domain/Remera.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1279" y="686"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="10" language="java" name="domain.Trama" project="QueMePongo" file="/QueMePongo/src/domain/Trama.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="94" y="967"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="10" language="java" name="domain.User" project="QueMePongo" file="/QueMePongo/src/domain/User.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="687" y="156"/>    
+  <class id="11" language="java" name="domain.TipoPrenda" project="QueMePongo" 
+    file="/QueMePongo/src/domain/TipoPrenda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="902" y="740"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="11">    
-    <bendpoint x="818" y="206"/>    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="12" name="queMePongo">        
-        <position height="0" width="0" x="187" y="-442"/>      
-      </attribute>      
-      <multiplicity id="13" minimum="0" maximum="1">        
-        <position height="0" width="0" x="187" y="-442"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <class id="12" language="java" name="domain.Uniforme" project="QueMePongo" file="/QueMePongo/src/domain/Uniforme.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="930" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
   <association id="14">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="15" name="material">        
-        <position height="0" width="0" x="-206" y="-503"/>      
-      </attribute>      
-      <multiplicity id="16" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-206" y="-503"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="17">    
-    <bendpoint x="444" y="423"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="18" name="guardarropa">        
-        <position height="0" width="0" x="-374" y="-708"/>      
-      </attribute>      
-      <multiplicity id="19" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-374" y="-708"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="20">    
-    <bendpoint x="821" y="1016"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="21" name="categoriaPrenda">        
-        <position height="0" width="0" x="496" y="-624"/>      
-      </attribute>      
-      <multiplicity id="22" minimum="0" maximum="1">        
-        <position height="0" width="0" x="496" y="-624"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="24" name="colores">        
-        <position height="0" width="0" x="242" y="-815"/>      
-      </attribute>      
-      <multiplicity id="25" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="242" y="-815"/>      
-      </multiplicity>    
+    <bendpoint x="518" y="888"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="15" name="coloresValidos"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="26">    
-    <bendpoint x="832" y="370"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="27" name="guardarropa">        
-        <position height="0" width="0" x="-6" y="-537"/>      
+  <association id="17">    
+    <bendpoint x="254" y="810"/>    
+    <bendpoint x="230" y="886"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="18" name="colorSecundario"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <bendpoint x="569" y="934"/>    
+    <bendpoint x="442" y="934"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="21" name="materialesValidos"/>      
+      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <bendpoint x="679" y="505"/>    
+    <bendpoint x="627" y="522"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="24" name="accesorio">        
+        <position height="17" width="55" x="546" y="554"/>      
       </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-6" y="-537"/>      
-      </multiplicity>    
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <bendpoint x="813" y="585"/>    
+    <bendpoint x="607" y="645"/>    
+    <bendpoint x="550" y="655"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="27" name="calzado"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="29">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="30" name="color">        
-        <position height="0" width="0" x="242" y="-815"/>      
-      </attribute>      
-      <multiplicity id="31" minimum="0" maximum="1">        
-        <position height="0" width="0" x="242" y="-815"/>      
-      </multiplicity>    
+    <bendpoint x="726" y="110"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="30" name="atuendo"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="32">    
-    <bendpoint x="742" y="866"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="33" name="climaOptimo">        
-        <position height="0" width="0" x="12" y="-967"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
-        <position height="0" width="0" x="12" y="-967"/>      
-      </multiplicity>    
+    <bendpoint x="759" y="551"/>    
+    <bendpoint x="634" y="603"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="33" name="prendaInferior"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="35">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="36" name="prendas">        
-        <position height="0" width="0" x="-374" y="-708"/>      
-      </attribute>      
-      <multiplicity id="37" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-374" y="-708"/>      
-      </multiplicity>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="36" name="categoriaPrenda"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="38">    
-    <bendpoint x="588" y="696"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="39" name="preferenciaClimatica">        
-        <position height="0" width="0" x="12" y="-967"/>      
-      </attribute>      
-      <multiplicity id="40" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="12" y="-967"/>      
-      </multiplicity>    
+    <bendpoint x="247" y="413"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="39" name="material"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="42" name="tipoPrenda">        
-        <position height="0" width="0" x="-113" y="-470"/>      
+  <generalization id="41">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="42">    
+    <bendpoint x="675" y="404"/>    
+    <bendpoint x="552" y="466"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="43" name="prendaSuperior">        
+        <position height="17" width="85" x="537" y="484"/>      
       </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-113" y="-470"/>      
-      </multiplicity>    
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="44">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="45" name="atuendo">        
-        <position height="0" width="0" x="-338" y="-426"/>      
-      </attribute>      
-      <multiplicity id="46" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-338" y="-426"/>      
-      </multiplicity>    
+  <generalization id="45">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="46">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="47" name="tipoTrama"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <bendpoint x="531" y="388"/>    
+    <bendpoint x="504" y="399"/>    
+    <bendpoint x="438" y="416"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="50" name="prendaBorrador">        
+        <position height="17" width="87" x="438" y="437"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <bendpoint x="757" y="190"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="53" name="uniformes"/>      
+      <multiplicity id="54" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="56" name="colorPrimario"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="59" name="guardarropa">        
+        <position height="17" width="70" x="320" y="428"/>      
+      </attribute>      
+      <multiplicity id="60" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
+    <bendpoint x="555" y="732"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="62" name="tipoPrenda"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

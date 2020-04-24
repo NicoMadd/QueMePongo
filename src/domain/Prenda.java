@@ -6,33 +6,37 @@ import exceptions.PrendaInvalidaException;
 public class Prenda {
 	TipoPrenda tipoPrenda;
 	Color colorPrimario;
-	Color colorSecunadario;
+	Color colorSecundario;
 	Material material;
-	public Prenda(TipoPrenda unTipoPrenda, Material material, Color colorPrimario, Color colorSecundario) {
-		validar(unTipoPrenda, material, colorPrimario);
+	public Prenda(TipoPrenda unTipoPrenda) {
 		this.tipoPrenda = unTipoPrenda;
-		this.material = material;
-		this.colorPrimario = colorPrimario;
+		this.colorPrimario = null;
+		this.colorSecundario = null;
+		this.material = null;
 	}
 	
-	public void validar(TipoPrenda unTipoPrenda, Material material, Color color){
-		if(unTipoPrenda.equals(null)) {
+	public void validar(){
+		if(tipoPrenda.equals(null)) {
 			throw new PrendaInvalidaException("La prenda no tiene un tipo asignado");
 		}
-		if(color.equals(null)) {
+		if(colorPrimario.equals(null)) {
 			throw new PrendaInvalidaException("La prenda no tiene un color asignado");
 		}
 		if(material.equals(null)) {
-			throw new PrendaInvalidaException("Prenda Invalida! La prenda no tiene un material asignado");
+			throw new PrendaInvalidaException("La prenda no tiene un material asignado");
 		}
 	}
 	
-	public Material getMaterial() {
-		return material;
+	public void asignarColorPrimario(Color color) {
+		colorPrimario = tipoPrenda.asignarColor(color);
 	}
 	
-	public void setMaterial(Material material) {
-		this.material = material;
+	public void asignarColorSecundario(Color color) {
+		colorSecundario = tipoPrenda.asignarColor(color);
+	}
+	
+	public void asignarMaterial(Material material) {
+		material = tipoPrenda.asignarMaterial(material);
 	}
 	
 	public CategoriaPrenda getCategoriaPrenda() {

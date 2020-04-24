@@ -3,37 +3,61 @@ import exceptions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.PartialResultException;
+
 public class Atuendo {
-	List<Prenda> prendas;
+	Prenda calzado;
+	Prenda prendaSuperior;
+	Prenda prendaInferior;
+	Prenda accesorio;
 	
 	public Atuendo() {
-		this.prendas = new ArrayList<>();
-		/* El usuario ingresa solo hasta 4 prendas, y minimo 3,
-		*  deben ser una de cada categoria,(solo hay 4), excluyendo los accesorios, !!!se valida aca!!!
-		*  en caso de excepcion informa el error correspondiente.
-		*/	}
-	
-	private boolean contienePrendasNecesarias() throws AtuendoInvalidoException{
-		return prendas.stream().anyMatch( prenda -> prenda.esCalzado()) &&
-			prendas.stream().anyMatch(prenda -> prenda.esParteInferior()) &&
-			prendas.stream().anyMatch( prenda -> prenda.esParteSuperior());
+		this.calzado = null;
+		this.accesorio = null;
+		this.prendaSuperior = null;
+		this.prendaInferior = null;
 	}
 	
-	public void validar() throws AtuendoInvalidoException{
-		if(prendas.isEmpty()) {
-			throw new AtuendoInvalidoException("El atuendo no contiene prendas");
-		}
-		if(prendas.size()<3 || prendas.size()>4) {
-			throw new AtuendoInvalidoException("Le faltan prendas o tiene de mas!");
-		
-		}else if(!contienePrendasNecesarias()) {
+	private boolean contienePrendasNecesarias(){
+		return calzado.esCalzado() &&
+			prendaInferior.esParteInferior() &&
+			prendaSuperior.esParteSuperior();
+	}
+	
+	public void validar(){
+		if(!contienePrendasNecesarias()) {
 			throw new AtuendoInvalidoException("El atuendo no contiene las prendas necesarias para su "
 												+ "validacion. Estas son un UNICO CALZADO, UNA UNICA "
 												+ "PARTE SUPERIOR Y UNA UNICA PARTE INFERIOR");
 		}
 	}
-
-	public void agregarPrenda(Prenda unaPrenda) {
-		prendas.add(unaPrenda);
+	
+	public void agregarPrendaAccesorio(Prenda unaPrenda) {
+		if(unaPrenda.esAccesorio())
+			accesorio=unaPrenda;
+		else
+			throw new UniformeInvalidoException("La prenda " + unaPrenda + "no es accesorio");
 	}
+	
+	public void agregarPrendaSuperior(Prenda unaPrenda) {
+		if(unaPrenda.esParteSuperior())
+			prendaSuperior=unaPrenda;
+		else
+			throw new UniformeInvalidoException("La prenda " + unaPrenda + "no es parte superior");
+	}
+	
+	public void agregarPrendaCalzado(Prenda unaPrenda) {
+		if(unaPrenda.esCalzado())
+			calzado=unaPrenda;
+		else
+			throw new UniformeInvalidoException("La prenda " + unaPrenda + "no es calzado");
+	}
+	
+	public void agregarPrendaInferior(Prenda unaPrenda) {
+		if(unaPrenda.esParteInferior())
+			prendaInferior=unaPrenda;
+		else
+			throw new UniformeInvalidoException("La prenda " + unaPrenda + "no es parte inferior");
+	}
+
 }

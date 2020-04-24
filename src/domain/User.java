@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import exceptions.*;
 
 /*
@@ -12,41 +15,41 @@ public class User {
 	static int idGlobal=0;
 	int id;
 	String nombre;
-	Atuendo atuendo;
-	QueMePongo queMePongo;
+	Uniforme atuendo;
+	Guardarropa guardarropa;
+	Prenda prendaBorrador;
+	List<Uniforme> uniformes;
 	
 	public User(String unNombre) {
 		this.id = idGlobal++;
 		this.nombre = unNombre;
-		this.queMePongo = new QueMePongo();
-		this.atuendo = new Atuendo();
+		this.guardarropa = new Guardarropa();
+		this.atuendo = null;
+		this.uniformes = new LinkedList<>();
 	}
 	
-	public Atuendo queTraigoPuesto() throws AtuendoInvalidoException {
-		return getAtuendo(); 
-	}
+	
+	public void agregarPrenda(){
+		prendaBorrador.validar();
+		guardarropa.agregar(prendaBorrador);
+		prendaBorrador=null;
 		
-	public void indicarQueTraigoPuesto() throws AtuendoInvalidoException {
-		ingresarAtuendo();
+	}
+	
+	public void crearPrenda(TipoPrenda unTipoPrenda) {
+		this.prendaBorrador = new Prenda(unTipoPrenda);
+	}
+	
+	public void agregarColorPrimarioPrenda(Color color) {
+		prendaBorrador.asignarColorPrimario(color);
+	}
+	
+	public void agregarColorSecundario(Color color) {
+		prendaBorrador.asignarColorSecundario(color);
+	}
+	
+	public void asignarMaterialPrenda(Material material) {
+		prendaBorrador.asignarMaterial(material);
 	}
 
-	private Atuendo getAtuendo() throws AtuendoInvalidoException {
-		try{
-			atuendo.validar();
-		}catch (AtuendoInvalidoException e) {
-			e.getMessage();
-			System.out.println("Debe agregar un atuendo antes para poder obtenerlo");
-		}
-		return atuendo;
-	}
-	
-	private void validarAtuendo(Atuendo atuendo) throws AtuendoInvalidoException{
-		atuendo.validar();
-	}
-	
-	public void ingresarAtuendo() throws AtuendoInvalidoException{
-		Atuendo unAtuendo = new Atuendo();
-		validarAtuendo(unAtuendo);
-		this.atuendo=unAtuendo;
-	}
 }

@@ -1,19 +1,31 @@
 package domain;
 
-public enum TipoPrenda {
+import java.util.List;
+
+import exceptions.TipoPrendaInvalidaException;
+
+public abstract class TipoPrenda{
+	CategoriaPrenda categoriaPrenda;
+	List<Color> coloresValidos;//COLORES VALIDOS
+	List<Color> materialesValidos;//MATERIALES VALIDOS
 	
-	REMERA (CategoriaPrenda.PARTE_SUPERIOR),
-	PANTALON (CategoriaPrenda.PARTE_INFERIOR);
+	public Color asignarColor(Color color) {
+		if(coloresValidos.contains(color))
+			return color;
+		else
+			throw new TipoPrendaInvalidaException("Color no valido!");
+	}
 	
-	private final CategoriaPrenda categoriaPrenda;
-	
-	TipoPrenda(CategoriaPrenda categoriaPrenda) {
-		this.categoriaPrenda = categoriaPrenda;
+	public Material asignarMaterial(Material material) {
+		if(materialesValidos.contains(material))
+			return material;
+		else
+			throw new TipoPrendaInvalidaException("Material no valido!");
 	}
 	
 	public CategoriaPrenda getCategoria() {
-		return this.categoriaPrenda;
+		return categoriaPrenda;
 	}
 
+	
 }
-
