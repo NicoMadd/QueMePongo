@@ -1,12 +1,11 @@
 package domain;
 
 import java.util.LinkedList;
+
 import java.util.List;
 
-import exceptions.*;
-
 /*
- * En la clase User se tendra referencia a una clase QueMePongo que permite hacer la generacion de conjuntos. La clase usuario tendra su propio atuendo
+ * La clase usuario tendra su propio atuendo
  * que este podra ser incluido o no en la generacion. Tambien tendra un nombre y una id para identidad.
 */
 
@@ -17,7 +16,7 @@ public class User {
 	String nombre;
 	Uniforme atuendo;
 	Guardarropa guardarropa;
-	Prenda prendaBorrador;
+	Borrador prendaBorrador;
 	List<Uniforme> uniformes;
 	
 	public User(String unNombre) {
@@ -28,28 +27,16 @@ public class User {
 		this.uniformes = new LinkedList<>();
 	}
 	
+	public void crearBorrador(TipoPrenda tipoPrenda) {
+		this.prendaBorrador = new Borrador(tipoPrenda);
+	}
 	
 	public void agregarPrenda(){
-		prendaBorrador.validar();
-		guardarropa.agregar(prendaBorrador);
+		guardarropa.agregar(prendaBorrador.crearPrenda());
 		prendaBorrador=null;
 		
 	}
 	
-	public void crearPrenda(TipoPrenda unTipoPrenda) {
-		this.prendaBorrador = new Prenda(unTipoPrenda);
-	}
-	
-	public void agregarColorPrimarioPrenda(Color color) {
-		prendaBorrador.asignarColorPrimario(color);
-	}
-	
-	public void agregarColorSecundario(Color color) {
-		prendaBorrador.asignarColorSecundario(color);
-	}
-	
-	public void asignarMaterialPrenda(Material material) {
-		prendaBorrador.asignarMaterial(material);
-	}
+
 
 }

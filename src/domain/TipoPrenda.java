@@ -7,7 +7,7 @@ import exceptions.TipoPrendaInvalidaException;
 public abstract class TipoPrenda{
 	CategoriaPrenda categoriaPrenda;
 	List<Color> coloresValidos;//COLORES VALIDOS
-	List<Color> materialesValidos;//MATERIALES VALIDOS
+	List<Material> materialesValidos;//MATERIALES VALIDOS
 	
 	public Color asignarColor(Color color) {
 		if(coloresValidos.contains(color))

@@ -1,20 +1,33 @@
 package domain;
-import exceptions.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Uniforme extends Atuendo {
+
+public class Uniforme {
+	Prenda calzado;
+	Prenda prendaSuperior;
+	Prenda prendaInferior;
 	
 	public Uniforme(Prenda parteSuperior, Prenda parteInferior, Prenda calzado){
 		agregarPrendaCalzado(calzado);
 		agregarPrendaInferior(parteInferior);
 		agregarPrendaSuperior(parteSuperior);
-		agregarPrendaAccesorio(null);
 	}
 	
-	@Override
-	public void agregarPrendaAccesorio(Prenda unaPrenda) {
-		throw new UniformeInvalidoException("No se puede agregar un Accesorio a un Uniforme");
-		}
+
+    
+	private void agregarPrendaSuperior(Prenda parteSuperior) {
+		this.prendaSuperior = parteSuperior;
+		
+	}
+
+	private void agregarPrendaInferior(Prenda parteInferior) {
+		this.prendaSuperior = parteInferior;
+		
+	}
+
+	private void agregarPrendaCalzado(Prenda calzado) {
+		this.prendaSuperior = calzado;
+		
+	}
+	
 	
 }

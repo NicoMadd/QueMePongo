@@ -8,55 +8,32 @@ public class Prenda {
 	Color colorPrimario;
 	Color colorSecundario;
 	Material material;
-	public Prenda(TipoPrenda unTipoPrenda) {
+	
+	public Prenda(TipoPrenda unTipoPrenda, Color colorPrimario, Color colorSecundario, Material material) {
 		this.tipoPrenda = unTipoPrenda;
-		this.colorPrimario = null;
-		this.colorSecundario = null;
-		this.material = null;
+		this.colorPrimario = colorPrimario;
+		this.colorSecundario = colorSecundario;
+		this.material = material;
 	}
 	
-	public void validar(){
-		if(tipoPrenda.equals(null)) {
-			throw new PrendaInvalidaException("La prenda no tiene un tipo asignado");
-		}
-		if(colorPrimario.equals(null)) {
-			throw new PrendaInvalidaException("La prenda no tiene un color asignado");
-		}
-		if(material.equals(null)) {
-			throw new PrendaInvalidaException("La prenda no tiene un material asignado");
-		}
-	}
-	
-	public void asignarColorPrimario(Color color) {
-		colorPrimario = tipoPrenda.asignarColor(color);
-	}
-	
-	public void asignarColorSecundario(Color color) {
-		colorSecundario = tipoPrenda.asignarColor(color);
-	}
-	
-	public void asignarMaterial(Material material) {
-		material = tipoPrenda.asignarMaterial(material);
-	}
-	
-	public CategoriaPrenda getCategoriaPrenda() {
+	public CategoriaPrenda categoria() {
 		return tipoPrenda.getCategoria();
 	}
 
 	public boolean esParteSuperior() {
-		return getCategoriaPrenda()==CategoriaPrenda.PARTE_SUPERIOR;
+		return categoria()==CategoriaPrenda.PARTE_SUPERIOR;
 	}
 	
 	public boolean esParteInferior() {
-		return getCategoriaPrenda()==CategoriaPrenda.PARTE_INFERIOR;
+		return categoria()==CategoriaPrenda.PARTE_INFERIOR;
 	}
 	
 	public boolean esCalzado() {
-		return getCategoriaPrenda()==CategoriaPrenda.CALZADO;
+		return categoria()==CategoriaPrenda.CALZADO;
 	}
 	
 	public boolean esAccesorio() {
-		return getCategoriaPrenda()==CategoriaPrenda.ACCESORIO;
+		return categoria()==CategoriaPrenda.ACCESORIO;
 	}
 
 }
