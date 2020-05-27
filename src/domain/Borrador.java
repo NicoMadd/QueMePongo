@@ -7,6 +7,7 @@ public class Borrador {
 	Material material;
 	
 	public Borrador(TipoPrenda tipoPrenda) {
+		
 		validateNonNull(tipoPrenda);
 		this.tipoPrenda = tipoPrenda;
 	}
