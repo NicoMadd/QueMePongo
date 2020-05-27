@@ -8,12 +8,17 @@ public class Prenda {
 	Color colorPrimario;
 	Color colorSecundario;
 	Material material;
-	
-	public Prenda(TipoPrenda unTipoPrenda, Color colorPrimario, Color colorSecundario, Material material) {
+	Float temperatura;
+	public Prenda(TipoPrenda unTipoPrenda, Color colorPrimario, Color colorSecundario, Material material, Float temperatura) {
 		this.tipoPrenda = unTipoPrenda;
 		this.colorPrimario = colorPrimario;
 		this.colorSecundario = colorSecundario;
 		this.material = material;
+		this.temperatura = temperatura;
+	}
+	
+	public boolean esAptaATemperatura(Float temperatura) {
+		return this.temperatura<=temperatura;
 	}
 	
 	public CategoriaPrenda categoria() {

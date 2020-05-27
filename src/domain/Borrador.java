@@ -5,6 +5,7 @@ public class Borrador {
 	Color colorPrimario;
 	Color colorSecundario;
 	Material material;
+	Float temperatura;
 	
 	public Borrador(TipoPrenda tipoPrenda) {
 		
@@ -15,7 +16,12 @@ public class Borrador {
 	public Prenda crearPrenda() {
 		validateNonNull(colorPrimario);
 		validateNonNull(material);
-		return new Prenda(tipoPrenda, colorPrimario, colorSecundario, material);
+		validateNonNull(temperatura);
+		return new Prenda(tipoPrenda, colorPrimario, colorSecundario, material, temperatura);
+	}
+	
+	public void asignarColorPrimario(Float temperatura) {
+		this.temperatura = temperatura
 	}
 	
 	public void asignarColorPrimario(Color color) {

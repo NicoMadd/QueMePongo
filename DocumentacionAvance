@@ -1,0 +1,6 @@
+Cree un adapter el cual interpreta mensajes de la accuweatherAPI.
+Este adapter es un singleton el cual tiene una interfaz determinada que se adapta a interfaces de modulos del clima externos
+Planteo dos alternativas. Una, si el adapter debe mutar es en el codigo implementado, aunqe con singletons tengo entendido que no es recomendable.
+En caso contrario, se debera cambiar el adapter cada vez que se quiera cambiar el modulo del cual se obtiene la informacion, lo cual seria de facil modificacion.
+Para hacer uso ante los gastos innecesarios y para los stakeholders de probar la aplicacion se defnio un mock como clase que es accuWeatherAPI el cual simula 
+el funcionamiento del verdadero accuWeatherAPI. Aunque esto esta implementado a nivel clse, me pareceria mas correcto que este modelado en la parte de testing.
