@@ -21,7 +21,7 @@ public class Borrador {
 	}
 	
 	public void asignarColorPrimario(Float temperatura) {
-		this.temperatura = temperatura
+		this.temperatura = temperatura;
 	}
 	
 	public void asignarColorPrimario(Color color) {

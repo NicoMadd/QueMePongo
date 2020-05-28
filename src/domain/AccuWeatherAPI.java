@@ -1,3 +1,5 @@
+package domain;
+
 import java.util.*;
 
 public final class AccuWeatherAPI{

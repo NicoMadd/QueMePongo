@@ -6,16 +6,16 @@ public class Clima {
 	
 	
 	Clima(){
-		this.apiClima = new AccuWeatherAPI();
+		this.apiClima = new AccuWeatherAdapter.getInstance();
 	}
 	
 	
-	public cambiarAdministradoClima(IClima climaAdmin) {
+	public void cambiarAdministradorClima(IClima climaAdmin) {
 		//solo lo puede hacer un administrador
 		apiClima = climaAdmin;
 	}
 	
-	public void temperatura() {
+	public Float temperatura() {
 		return apiClima.temperatura();
 	}
 	
